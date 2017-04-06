@@ -18,7 +18,7 @@ public:
         ListNode* temp=NULL;
         if(l1->val<l2->val){
             temp=l1;
-            l1->next=mergeTwoLists(l1->next,l2);
+            l1->next=mergeTwoLists(l1->next,l2);//not return
         }
         else{
             temp=l2;
