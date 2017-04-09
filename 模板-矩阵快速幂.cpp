@@ -1,4 +1,4 @@
-//¾ØÕó¿ìËÙÃÝÄ£°å£¨ÖØÔØÔËËã·û£©
+//矩阵快速幂模板（重载运算符）
 struct Matrix{
   long long a[N][N];
   Matrix(){
@@ -27,7 +27,7 @@ struct Matrix{
   }
 };
 
-//Àý×Ó hihocoder #1504ÆïÊ¿ÓÎÀú
+//例子 hihocoder #1504骑士游历
 //http://hihocoder.com/problemset/problem/1504
 #include<bits/stdc++.h>
 typedef long long LL;
