@@ -1,4 +1,4 @@
-//矩阵快速幂模板（重载运算符）
+//戮脴脮贸驴矛脣脵脙脻脛拢掳氓拢篓脰脴脭脴脭脣脣茫路没拢漏
 struct Matrix{
   long long a[N][N];
   Matrix(){
@@ -27,7 +27,7 @@ struct Matrix{
   }
 };
 
-//例子 hihocoder #1504骑士游历
+//脌媒脳脫 hihocoder #1504脝茂脢驴脫脦脌煤
 //http://hihocoder.com/problemset/problem/1504
 #include<bits/stdc++.h>
 typedef long long LL;
@@ -92,13 +92,4 @@ int main(){
    printf("%d\n",ans);
    return 0;
 }
-
-
-
-
-
-
-
-
-
 
