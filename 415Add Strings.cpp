@@ -1,6 +1,7 @@
 //模拟大数相加
 //注意reverse函数的使用 eg. reverse(s.begin(),s.end())
 //先判断进位，再相加
+//考虑负数？
 //https://leetcode.com/problems/add-strings
 class Solution {
 public:
