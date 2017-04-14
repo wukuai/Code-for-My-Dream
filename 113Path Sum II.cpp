@@ -30,3 +30,24 @@ public:
         path.pop_back();//关键点，弹出去，理解好递归，先进后出
     }
 };
+
+
+//优化版，利用好sum-root->val,减少传参
+//9ms beats 78.02% 
+class Solution {
+public:
+    vector<vector<int>> pathSum(TreeNode* root, int sum) {
+        vector<vector<int>>ans;
+        vector<int>path;
+        if(root==NULL) return ans;
+        findPath(root,path,ans,sum);
+        return ans;
+    }
+    void findPath(TreeNode* root,vector<int>& path,vector<vector<int>>& ans,int sum){
+        path.push_back(root->val);
+        if(sum==root->val&&root->left==NULL&&root->right==NULL) ans.push_back(path);
+        if(root->left) findPath(root->left,path,ans,sum-root->val);
+        if(root->right) findPath(root->right,path,ans,sum-root->val);
+        path.pop_back();//关键点，弹出去，理解好递归，先进后出
+    }
+};
