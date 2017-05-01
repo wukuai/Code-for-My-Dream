@@ -47,3 +47,15 @@ public:
         return recursive(newhead,newnex);//小心得，在有返回类型的递归函数中，应在递归调用前写个return，否则会出现无返回类型。
     }
 };
+
+//参考了讨论区，递归函数只用了一个参数，很棒！
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if(head==NULL||head->next==NULL) return head;//一定要加head->next==NULL
+        ListNode* tail=reverseList(head->next);
+        head->next->next=head;//head不会成为尾巴
+        head->next=NULL;//这句主要是给原头指针用的
+        return tail;
+    }
+};
