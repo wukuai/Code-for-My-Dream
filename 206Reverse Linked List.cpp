@@ -30,3 +30,20 @@ public:
         return pre;
     }
 };
+
+
+//递归实现（不太理想，又写了个两个参数的递归函数）
+//通用法则：先利用next得到下个点，再更改next
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        return recursive(NULL,head);
+    }
+    ListNode* recursive(ListNode* head,ListNode* nex){
+        if(nex==NULL) return head;
+        ListNode* newhead=nex;
+        ListNode* newnex=nex->next;//关键点，先利用next得到下个点，再更改next
+        nex->next=head;
+        return recursive(newhead,newnex);//小心得，在有返回类型的递归函数中，应在递归调用前写个return，否则会出现无返回类型。
+    }
+};
