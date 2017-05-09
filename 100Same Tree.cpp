@@ -18,3 +18,13 @@ public:
         else return false;
     }
 };
+
+//两行版，优美！
+bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(p==NULL||q==NULL) return p==q;
+        return (p->val==q->val&&isSameTree(p->left,q->left)&&isSameTree(p->right,q->right));
+}
+//一行版，更优美！
+bool isSameTree(TreeNode* p, TreeNode* q) {
+        return (p==NULL||q==NULL) ? (p==q):(p->val==q->val&&isSameTree(p->left,q->left)&&isSameTree(p->right,q->right));
+}
